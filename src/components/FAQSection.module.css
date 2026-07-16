@@ -1,0 +1,90 @@
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Accordion Card Container */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.item {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+/* Question Header button */
+.questionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+  background-color: #ffffff;
+  transition: all var(--transition-speed);
+}
+
+.questionHeader:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+/* Expand Icon styling */
+.icon {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: transform var(--transition-speed), color var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.iconOpen {
+  transform: rotate(45deg); /* Rotates "+" to "×" */
+  color: var(--primary-color);
+}
+
+/* Answer slide transition wrapper */
+.answerWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #fcfbff;
+}
+
+.answerOpen {
+  max-height: 200px; /* Big enough to fit answers */
+}
+
+.answerText {
+  padding: 0 24px 20px 24px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}

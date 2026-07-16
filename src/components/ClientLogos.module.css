@@ -1,0 +1,71 @@
+.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.viewAll {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+/* Local Marquee styling overrides */
+.marqueeWrapper {
+  display: flex;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  padding: 30px 20px;
+  user-select: none;
+}
+
+.marqueeTrack {
+  display: flex;
+  min-width: 200%;
+  animation: marqueeLocal 20s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f0f0f5;
+  transition: color var(--transition-speed);
+}
+
+.logoItem:hover {
+  color: var(--primary-color);
+}
+
+@keyframes marqueeLocal {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}

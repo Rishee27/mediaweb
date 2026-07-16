@@ -1,0 +1,318 @@
+.wrapper {
+  background-color: #faf9ff;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.backBtn {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-bottom: -10px;
+}
+
+.backBtn:hover {
+  color: var(--primary-color);
+}
+
+/* Top Split details card */
+.mainCard {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .mainCard {
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+  }
+}
+
+/* Left Graphic Icon Box */
+.mediaPreview {
+  width: 360px;
+  height: 240px;
+  background-color: #f3f2fa;
+  border-radius: var(--border-radius-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .mediaPreview {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.previewLogo {
+  color: #ffffff;
+  padding: 16px 28px;
+  font-size: 32px;
+  font-weight: 800;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Content details block */
+.mediaInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryTag {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  border-top: 1px solid #f2f0f9;
+  border-bottom: 1px solid #f2f0f9;
+  padding: 16px 0;
+  margin: 10px 0;
+}
+
+@media (max-width: 576px) {
+  .metaGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLbl {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.metaVal {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.priceBlock {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.priceLbl {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .btnGroup {
+    flex-direction: column;
+  }
+}
+
+.actionBtn {
+  flex: 1;
+  padding: 12px 24px;
+  font-weight: 700;
+  border-radius: var(--border-radius-btn);
+  font-size: 14px;
+  text-align: center;
+}
+
+.addBtn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.addBtn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.addBtnActive {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.quoteBtn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.quoteBtn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* Tabs Panel details Section */
+.tabsContainer {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.tabsHeader {
+  display: flex;
+  background-color: #fcfbff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tabBtn {
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-bottom: 3px solid transparent;
+  transition: all var(--transition-speed);
+}
+
+.tabBtn:hover {
+  color: var(--primary-color);
+  background-color: #f7f5ff;
+}
+
+.tabActive {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  background-color: #ffffff;
+}
+
+.tabContent {
+  padding: 30px;
+}
+
+.tabTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.tabText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Options Price Table */
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specTh {
+  text-align: left;
+  border-bottom: 2px solid #eeeeee;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.specTd {
+  border-bottom: 1px solid #f2f0f9;
+  padding: 12px 10px;
+  font-size: 13px;
+}
+
+/* Reviews List */
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviewItem {
+  border-bottom: 1px solid #f2f0f9;
+  padding-bottom: 16px;
+}
+
+.reviewItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reviewHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.reviewRating {
+  color: #ffcc00;
+}
+
+.reviewComment {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

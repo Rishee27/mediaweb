@@ -1,0 +1,163 @@
+.chatContainer {
+  width: 100%;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chatBox {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 4px 24px rgba(78, 59, 201, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--transition-speed);
+}
+
+.chatBox:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 32px rgba(78, 59, 201, 0.12);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sparkle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.counter {
+  font-size: 12px;
+  color: #999999;
+  font-weight: 500;
+}
+
+/* Input Row containing Textarea and Send Button */
+.inputArea {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.textarea {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: var(--text-primary);
+  min-height: 70px;
+  resize: none;
+  padding: 4px 0;
+  line-height: 1.5;
+}
+
+.textarea::placeholder {
+  color: #a0a0b0;
+}
+
+.sendBtn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.sendBtn:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Quick Action Buttons list */
+.quickActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid #f2f0f9;
+  padding-top: 16px;
+}
+
+.pillBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: var(--border-radius-pill);
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #333333;
+  font-weight: 500;
+  transition: all var(--transition-speed);
+}
+
+.pillBtn:hover {
+  background-color: #f0eeff;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* AI Responses */
+.responseBox {
+  background-color: #f8f7ff;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 4px 8px 8px 4px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  animation: slideDown var(--transition-speed) ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.responseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.closeResponseBtn {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.closeResponseBtn:hover {
+  color: var(--primary-color);
+}

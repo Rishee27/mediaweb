@@ -1,0 +1,268 @@
+.wrapper {
+  background-color: #faf9ff;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 280px Sidebar Filters */
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  padding: 24px;
+  height: fit-content;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.sidebarTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+
+/* Accordion filter blocks */
+.filterBlock {
+  border-bottom: 1px solid #f2f0f9;
+  padding: 16px 0;
+}
+
+.filterBlock:last-of-type {
+  border-bottom: none;
+}
+
+.filterHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.filterContent {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn var(--transition-speed) ease;
+}
+
+/* Location input and checkbox list */
+.locInput {
+  width: 100%;
+  border: 1px solid #e2e0f0;
+  border-radius: var(--border-radius-btn);
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxLabel input {
+  accent-color: var(--primary-color);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* Range slider display */
+.sliderLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rangeInput {
+  width: 100%;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Sidebar CTA Buttons */
+.applyBtn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 700;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius-btn);
+  margin-top: 24px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.applyBtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.resetLink {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.resetLink:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+.h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.countText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sortDropdown {
+  border: 1px solid #e2e0f0;
+  border-radius: var(--border-radius-btn);
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.viewToggle {
+  display: flex;
+  border: 1px solid #e2e0f0;
+  border-radius: var(--border-radius-btn);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.toggleBtn {
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleActive {
+  background-color: #f2f0f9;
+  color: var(--primary-color);
+}
+
+/* Media Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.listLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* We customize rendering when in list view */
+.listLayout > div {
+  flex-direction: row;
+  height: 180px;
+}
+
+.listLayout img, .listLayout :global(.PlaceholderIcon) {
+  width: 240px;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.noResults {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: var(--border-radius-card);
+  color: var(--text-secondary);
+}
