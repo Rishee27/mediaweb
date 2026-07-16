@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { cloudflare } from '@cloudflare/vite-plugin';
 
 export default defineConfig({
-  plugins: [
-    react({
-      include: /\.(js|jsx)$/,
-    }),
-  ],
+ plugins: [
+  cloudflare(),
+  react({
+    include: /\.(js|jsx)$/,
+  }),
+],
   esbuild: {
     loader: 'jsx',
     include: /src\/.*\.[jt]sx?$/,
